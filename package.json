@@ -1,0 +1,19 @@
+{
+  "name": "hotelier-widget",
+  "module": "index.ts",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.8",
+    "@types/bun": "latest",
+    "bun-plugin-tailwind": "^0.0.15",
+    "tailwindcss": "^4.1.8"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "scripts": {
+    "build": "bun build ./src/hotelier.ts --outdir ./dist --target browser --minify && bunx @tailwindcss/cli -i ./src/hotelier.css -o ./dist/hotelier.css",
+    "tailwindcss": "bunx @tailwindcss/cli -i ./src/hotelier.css -o ./dist/hotelier.css --watch",
+    "preview": "bun --hot index.html build.html"
+  },
+  "type": "module"
+}
