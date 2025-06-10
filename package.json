@@ -1,19 +1,159 @@
 {
-  "name": "hotelier-widget",
-  "module": "index.ts",
+  "version": "1.0.0",
+  "name": "hotelier-widgets",
+  "module": "./dist/hotelier.js",
+  "scripts": {
+    "build": "bun build ./src/hotelier.ts --outdir ./dist --target browser --minify && bunx @tailwindcss/cli -i ./src/hotelier.css -o ./dist/hotelier.css",
+    "tailwindcss": "bunx @tailwindcss/cli -i ./src/hotelier.css -o ./dist/hotelier.css --watch",
+    "preview": "bun --hot index.html live.html",
+    "commit": "cz",
+    "semantic-release": "semantic-release"
+  },
+  "type": "module",
+  "files": [
+    "dist"
+  ],
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.8",
     "@types/bun": "latest",
     "bun-plugin-tailwind": "^0.0.15",
-    "tailwindcss": "^4.1.8"
+    "tailwindcss": "^4.1.8",
+    "semantic-release": "^24.1.1",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^13.0.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^12.0.1",
+    "@semantic-release/release-notes-generator": "^14.0.1",
+    "commitizen": "^4.3.0",
+    "conventional-changelog-conventionalcommits": "^8.0.0",
+    "cz-conventional-changelog": "^3.3.0"
   },
   "peerDependencies": {
     "typescript": "^5"
   },
-  "scripts": {
-    "build": "bun build ./src/hotelier.ts --outdir ./dist --target browser --minify && bunx @tailwindcss/cli -i ./src/hotelier.css -o ./dist/hotelier.css",
-    "tailwindcss": "bunx @tailwindcss/cli -i ./src/hotelier.css -o ./dist/hotelier.css --watch",
-    "preview": "bun --hot index.html live.html"
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   },
-  "type": "module"
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      [
+        "@semantic-release/commit-analyzer",
+        {
+          "releaseRules": [
+            {
+              "type": "refactor",
+              "release": "patch"
+            },
+            {
+              "type": "docs",
+              "scope": "README",
+              "release": "patch"
+            },
+            {
+              "type": "test",
+              "release": "patch"
+            },
+            {
+              "type": "style",
+              "release": "patch"
+            },
+            {
+              "type": "perf",
+              "release": "patch"
+            },
+            {
+              "type": "ci",
+              "release": "patch"
+            },
+            {
+              "type": "build",
+              "release": "patch"
+            },
+            {
+              "type": "chore",
+              "release": "patch"
+            },
+            {
+              "type": "no-release",
+              "release": false
+            }
+          ]
+        }
+      ],
+      [
+        "@semantic-release/release-notes-generator",
+        {
+          "preset": "conventionalcommits",
+          "presetConfig": {
+            "types": [
+              {
+                "type": "feat",
+                "section": ":sparkles: Features",
+                "hidden": false
+              },
+              {
+                "type": "fix",
+                "section": ":bug: Fixes",
+                "hidden": false
+              },
+              {
+                "type": "docs",
+                "section": ":memo: Documentation",
+                "hidden": false
+              },
+              {
+                "type": "style",
+                "section": ":barber: Code-style",
+                "hidden": false
+              },
+              {
+                "type": "refactor",
+                "section": ":zap: Refactor",
+                "hidden": false
+              },
+              {
+                "type": "perf",
+                "section": ":fast_forward: Performance",
+                "hidden": false
+              },
+              {
+                "type": "test",
+                "section": ":white_check_mark: Tests",
+                "hidden": false
+              },
+              {
+                "type": "ci",
+                "section": ":repeat: CI",
+                "hidden": false
+              },
+              {
+                "type": "chore",
+                "section": ":repeat: Chore",
+                "hidden": false
+              }
+            ]
+          }
+        }
+      ],
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "package.json",
+            "bun.lock",
+            "CHANGELOG.md"
+          ],
+          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ],
+      "@semantic-release/github"
+    ]
+  }
 }
