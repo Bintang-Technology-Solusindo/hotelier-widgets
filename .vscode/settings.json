@@ -1,0 +1,17 @@
+{
+  "editor.rulers": [
+    {
+      "column": 200,
+      "color": "#ffffff"
+    }
+  ],
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.fixAll.eslint": "explicit"
+  },
+  
+  "todo-tree.tree.disableCompactFolders": true,
+  "explorer.compactFolders": false,
+  "tailwindCSS.lint.invalidConfigPath": "ignore"
+}
