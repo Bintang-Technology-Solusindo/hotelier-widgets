@@ -13,7 +13,7 @@
   "scripts": {
     "build": "bun build ./src/hotelier.ts --outdir ./dist --target browser --minify && bunx @tailwindcss/cli -i ./src/hotelier.css -o ./dist/hotelier.css",
     "tailwindcss": "bunx @tailwindcss/cli -i ./src/hotelier.css -o ./dist/hotelier.css --watch",
-    "preview": "bun --hot index.html build.html"
+    "preview": "bun --hot index.html live.html"
   },
   "type": "module"
 }
