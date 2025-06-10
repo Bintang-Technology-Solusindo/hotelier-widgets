@@ -3,13 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <title>Tes Widget Counter</title>
-  <style>
+  <style type="text/css">
     body { display: flex; gap: 20px; padding: 20px; }
   </style>
-  <script src="./src/index.ts" type="module"></script>
+  <link rel="stylesheet" href="/src//index.css">
+  <script src="/src/index.ts" type="module"></script>
 </head>
 <body>
-  <h1>Contoh Widget</h1>
-  <div hotelier-widget="horizontal"></div>
+  <div class="w-full flex flex-col gap-4">
+    <div hotelier-widget="horizontal" hotelier-url="https://wisatahotel.com"></div>
+    <div hotelier-widget="horizontal" hotelier-url="https://wewokdetok.com"></div>
+  </div>
 </body>
 </html>
