@@ -6,7 +6,7 @@
   <style type="text/css">
     body { display: flex; gap: 20px; padding: 20px; }
   </style>
-  <link rel="stylesheet" href="/src//index.css">
+  <link rel="stylesheet" href="/src/index.css">
   <script src="/src/index.ts" type="module"></script>
   <style>
     h3 {
@@ -15,11 +15,31 @@
     }
   </style>
 </head>
-<body>
+<body class="bg-gray-100">
   <div class="w-full flex flex-col gap-4">
     <div>
-      <h3>Horizontal</h3>
-      <div hotelier-widget="horizontal" data-url="https://yourdomain.com"></div>
+      <h3>Horizontal & Compact</h3>
+      <div hotelier-widget="horizontal-compact" data-url="https://yourdomain.com" style="max-width: 1000px;"></div>
+    </div>
+    <div>
+      <h3>Horizontal and Minimalis</h3>
+      <div hotelier-widget="horizontal-minimalis" data-url="https://yourdomain.com" style="max-width: 1000px;"></div>
+    </div>
+    <div>
+      <h3>Horizontal and Rounded</h3>
+      <div hotelier-widget="horizontal-rounded" data-url="https://yourdomain.com" style="max-width: 1000px;"></div>
+    </div>
+    <div>
+      <h3>Vertical and Prominent</h3>
+      <div hotelier-widget="vertical-prominent" data-url="https://yourdomain.com" style="max-width: 400px;"></div>
+    </div>
+    <div>
+      <h3>Vertical and Dark</h3>
+      <div hotelier-widget="vertical-dark" data-url="https://yourdomain.com"></div>
+    </div>
+    <div>
+      <h3>Vertical and Gradient</h3>
+      <div hotelier-widget="vertical-gradient" data-url="https://yourdomain.com"></div>
     </div>
   </div>
 </body>

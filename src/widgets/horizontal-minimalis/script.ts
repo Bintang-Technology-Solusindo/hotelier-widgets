@@ -1,4 +1,4 @@
-export const HorizontalScript = (index: number) => {
+export const HorizontalMinimalisScript = (index: number) => {
   const scriptElement = document.createElement("script");
   scriptElement.textContent = `(${main.toString().replaceAll("_INDEX", String(index))})();`;
 
@@ -7,15 +7,15 @@ export const HorizontalScript = (index: number) => {
 
 const main = () => {
   const index = "_INDEX" as string | number;
-  const checkinId = `checkin-${index}`;
-  const checkoutId = `checkout-${index}`;
-  const guestId = `guest-${index}`;
+  const checkinId = `checkin-horizontal-minimalis-${index}`;
+  const checkoutId = `checkout-horizontal-minimalis-${index}`;
+  const guestId = `guest-horizontal-minimalis-${index}`;
+  const shadowRoot = (document.querySelectorAll("[hotelier-widget='horizontal-minimalis']")[index as number] as HTMLElement).shadowRoot!;
 
-  function setupWidget(shadowRoot: ShadowRoot) {
+  (() => {
     const checkinInput = shadowRoot.getElementById(checkinId)! as HTMLInputElement;
     const checkoutInput = shadowRoot.getElementById(checkoutId)! as HTMLInputElement;
     const guestInput = shadowRoot.getElementById(guestId)! as HTMLInputElement;
-
     if (!checkinInput || !checkoutInput || !guestInput) {
       return;
     }
@@ -53,8 +53,5 @@ const main = () => {
 
     checkinInput.addEventListener("change", handleDateChange);
     checkoutInput.addEventListener("change", handleDateChange);
-  }
-
-  const hotelierWidgets = (document.querySelectorAll("[hotelier-widget='horizontal']")[index as number] as HTMLElement).shadowRoot!;
-  setupWidget(hotelierWidgets);
+  })();
 };
