@@ -10,32 +10,47 @@ const main = () => {
   const checkinId = `checkin-horizontal-rounded-${index}`;
   const checkoutId = `checkout-horizontal-rounded-${index}`;
   const guestId = `guest-horizontal-rounded-${index}`;
-  const shadowRoot = (document.querySelectorAll("[hotelier-widget='horizontal-rounded']")[index as number] as HTMLElement).shadowRoot!;
+
+  const hostEl = document.querySelectorAll("[hotelier-widget='horizontal-rounded']")[index as number] as HTMLElement;
+  const shadowRoot = hostEl.shadowRoot!;
+  const shadowHostWrapper = (shadowRoot.querySelector(".widget-wrapper") || shadowRoot) as HTMLElement;
+
+  const syncDarkMode = () => {
+    const isDark = document.documentElement.classList.contains("dark");
+    shadowHostWrapper.classList.toggle("dark", isDark);
+  };
+
+  syncDarkMode();
+
+  const observer = new MutationObserver(() => {
+    syncDarkMode();
+  });
+
+  observer.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ["class"],
+  });
 
   (() => {
     const checkinInput = shadowRoot.getElementById(checkinId)! as HTMLInputElement;
     const checkoutInput = shadowRoot.getElementById(checkoutId)! as HTMLInputElement;
     const guestInput = shadowRoot.getElementById(guestId)! as HTMLInputElement;
 
-    if (!checkinInput || !checkoutInput || !guestInput) {
-      return;
-    }
+    if (!checkinInput || !checkoutInput || !guestInput) return;
 
     const today = new Date();
     const todayString = today.toISOString().split("T")[0]!;
-
     const tomorrow = new Date(today);
     tomorrow.setDate(today.getDate() + 1);
     const tomorrowString = tomorrow.toISOString().split("T")[0]!;
 
     checkinInput.min = todayString;
     checkinInput.value = todayString;
-
     checkoutInput.min = tomorrowString;
     checkoutInput.value = tomorrowString;
 
-    guestInput.min = String(1);
-    guestInput.value = String(1);
+    guestInput.min = "1";
+    guestInput.value = "1";
 
     function handleDateChange() {
       const checkinDate = new Date(checkinInput.value);
