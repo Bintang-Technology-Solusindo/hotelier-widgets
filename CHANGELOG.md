@@ -1,3 +1,9 @@
+## [1.0.3](https://github.com/Bintang-Technology-Solusindo/hotelier-widgets/compare/v1.0.2...v1.0.3) (2025-06-11)
+
+### :zap: Refactor
+
+* **spliting:** spliting codes ([23222d9](https://github.com/Bintang-Technology-Solusindo/hotelier-widgets/commit/23222d928b0f72f407f24651e84aa3b3e942f90e))
+
 ## [1.0.2](https://github.com/Bintang-Technology-Solusindo/hotelier-widgets/compare/v1.0.1...v1.0.2) (2025-06-10)
 
 ### :zap: Refactor
