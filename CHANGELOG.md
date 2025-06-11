@@ -1,3 +1,9 @@
+## [1.1.0](https://github.com/Bintang-Technology-Solusindo/hotelier-widgets/compare/v1.0.3...v1.1.0) (2025-06-11)
+
+### :sparkles: Features
+
+* **widgets:** add more widget templates ([8b64163](https://github.com/Bintang-Technology-Solusindo/hotelier-widgets/commit/8b64163daeda2e0b6855c0723dca35f15461f3f2))
+
 ## [1.0.3](https://github.com/Bintang-Technology-Solusindo/hotelier-widgets/compare/v1.0.2...v1.0.3) (2025-06-11)
 
 ### :zap: Refactor
