@@ -17,7 +17,6 @@
     "@biomejs/biome": "1.9.4",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^13.0.0",
-    "@semantic-release/exec": "^7.1.0",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/npm": "^12.0.1",
     "@semantic-release/release-notes-generator": "^14.0.1",
@@ -43,6 +42,7 @@
     "branches": ["main"],
     "plugins": [
       "@semantic-release/changelog",
+      "@semantic-release/npm",
       [
         "@semantic-release/commit-analyzer",
         {
@@ -142,21 +142,14 @@
           }
         }
       ],
-      [
-        "@semantic-release/exec",
-        {
-          "verifyReleaseCmd": "echo ${nextRelease.version} > .VERSION"
-        }
-      ],
+      "@semantic-release/github",
       [
         "@semantic-release/git",
         {
           "assets": ["package.json", "bun.lock", "CHANGELOG.md"],
           "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
         }
-      ],
-      "@semantic-release/github",
-      "@semantic-release/npm"
+      ]
     ]
   }
 }

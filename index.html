@@ -8,11 +8,19 @@
   </style>
   <link rel="stylesheet" href="/src//index.css">
   <script src="/src/index.ts" type="module"></script>
+  <style>
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 <body>
   <div class="w-full flex flex-col gap-4">
-    <div hotelier-widget="horizontal" hotelier-url="https://wisatahotel.com"></div>
-    <div hotelier-widget="horizontal" hotelier-url="https://wewokdetok.com"></div>
+    <div>
+      <h3>Horizontal</h3>
+      <div hotelier-widget="horizontal" data-url="https://yourdomain.com"></div>
+    </div>
   </div>
 </body>
 </html>

@@ -1,4 +1,3 @@
-import { isDevelopment } from "./utils/helper";
-import Horizontal from "./widgets/horizontal";
+import { WidgetInit } from "./widgets";
 
-Horizontal(isDevelopment);
+WidgetInit();
