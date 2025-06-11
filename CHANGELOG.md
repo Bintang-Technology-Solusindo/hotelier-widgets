@@ -1,3 +1,9 @@
+## [1.1.1](https://github.com/Bintang-Technology-Solusindo/hotelier-widgets/compare/v1.1.0...v1.1.1) (2025-06-11)
+
+### :zap: Refactor
+
+* **tailwindcss:** add dark mode ([907f5a1](https://github.com/Bintang-Technology-Solusindo/hotelier-widgets/commit/907f5a10926956f1c978265c0bf35b915d27ad19))
+
 ## [1.1.0](https://github.com/Bintang-Technology-Solusindo/hotelier-widgets/compare/v1.0.3...v1.1.0) (2025-06-11)
 
 ### :sparkles: Features
