@@ -3,6 +3,7 @@ import { version } from "../../package.json";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: "/hotelier-widgets/",
   title: "Hotelier Widgets",
   description: "List of widget for hotelier",
   head: [["script", { src: `https://cdn.jsdelivr.net/npm/hotelier-widgets@${version}/dist/hotelier-widgets.js`, type: "module" }]],
