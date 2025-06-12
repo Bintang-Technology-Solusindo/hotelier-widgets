@@ -1,3 +1,9 @@
+## [1.2.2](https://github.com/Bintang-Technology-Solusindo/hotelier-widgets/compare/v1.2.1...v1.2.2) (2025-06-12)
+
+### :repeat: CI
+
+* **github:** update permission for github pages ([97ce94d](https://github.com/Bintang-Technology-Solusindo/hotelier-widgets/commit/97ce94dfbbcf3ff370addea01283c69a40bc42fe))
+
 ## [1.2.1](https://github.com/Bintang-Technology-Solusindo/hotelier-widgets/compare/v1.2.0...v1.2.1) (2025-06-12)
 
 ### :repeat: CI
