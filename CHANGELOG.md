@@ -1,3 +1,9 @@
+## [1.2.1](https://github.com/Bintang-Technology-Solusindo/hotelier-widgets/compare/v1.2.0...v1.2.1) (2025-06-12)
+
+### :repeat: CI
+
+* **github:** update github release and deploy workflow ([0d09963](https://github.com/Bintang-Technology-Solusindo/hotelier-widgets/commit/0d09963050edba27217f3667ae3e536001c460a4))
+
 ## [1.2.0](https://github.com/Bintang-Technology-Solusindo/hotelier-widgets/compare/v1.1.1...v1.2.0) (2025-06-12)
 
 ### :sparkles: Features
