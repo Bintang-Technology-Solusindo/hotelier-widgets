@@ -6,12 +6,12 @@ hero:
   name: "Hotelier Widgets"
   tagline: "List of widget for hotelier"
   image:
-    src: https://github.com/Bintang-Technology-Solusindo/hotelier-widgets/blob/main/docs/logo.png?raw=true
+    src: /logo.png
     width: 250px
-    alt: 
+    alt:
   actions:
     - theme: brand
-      text: Get Started 
+      text: Get Started
       link: /installation
     - theme: alt
       text: Demo

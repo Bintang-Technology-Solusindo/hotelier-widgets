@@ -9,7 +9,7 @@ export default defineConfig({
   head: [["script", { src: `https://cdn.jsdelivr.net/npm/hotelier-widgets@${version}/dist/hotelier-widgets.js`, type: "module" }]],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    logo: { src: "https://github.com/Bintang-Technology-Solusindo/hotelier-widgets/blob/main/docs/logo.png?raw=true", alt: "Hotelier Widgets Logo", width: 24, height: 24 },
+    logo: { src: "/logo.png", alt: "Hotelier Widgets Logo", width: 24, height: 24 },
     nav: [
       { text: "Get Started", link: "/installation" },
       { text: "Demo", link: "/demo" },
