@@ -12,7 +12,7 @@
     "lineWidth": 200,
     "attributePosition": "auto",
     "bracketSpacing": true,
-    "ignore": ["node_modules", "CHANGELOG.md", "bun.lock", "dist"]
+    "ignore": ["node_modules", "CHANGELOG.md", "bun.lock", "dist", "docs/public"]
   },
   "organizeImports": { "enabled": true },
   "linter": {
@@ -26,6 +26,6 @@
         "noNonNullAssertion": "off"
       }
     },
-    "ignore": ["node_modules", "CHANGELOG.md", "bun.lock", "dist"]
+    "ignore": ["node_modules", "CHANGELOG.md", "bun.lock", "dist", "docs/public"]
   }
 }
