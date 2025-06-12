@@ -6,7 +6,10 @@ export default defineConfig({
   base: "/hotelier-widgets/",
   title: "Hotelier Widgets",
   description: "List of widget for hotelier",
-  head: [["script", { src: `https://cdn.jsdelivr.net/npm/hotelier-widgets@${version}/dist/hotelier-widgets.js`, type: "module" }]],
+  head: [
+    ["link", { rel: "icon", href: "/hotelier-widgets/favicon.ico" }],
+    ["script", { src: `https://cdn.jsdelivr.net/npm/hotelier-widgets@${version}/dist/hotelier-widgets.js`, type: "module" }],
+  ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: { src: "/logo.png", alt: "Hotelier Widgets Logo", width: 24, height: 24 },
