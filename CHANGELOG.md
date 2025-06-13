@@ -1,3 +1,16 @@
+## [1.2.3](https://github.com/Bintang-Technology-Solusindo/hotelier-widgets/compare/v1.2.2...v1.2.3) (2025-06-13)
+
+### :memo: Documentation
+
+* **assets:** move assets to public folder ([7ea6592](https://github.com/Bintang-Technology-Solusindo/hotelier-widgets/commit/7ea6592e7402b1f6cf22cd5758d9cc697142115e))
+* **config:** update base url for github page ([559b0eb](https://github.com/Bintang-Technology-Solusindo/hotelier-widgets/commit/559b0eba9ebf73f7ff9f56cf84e1eb629ca923cd))
+* **favicon:** resolve favicon path ([c6117ea](https://github.com/Bintang-Technology-Solusindo/hotelier-widgets/commit/c6117ea3584626bfca4dc0e5db9e6c673de89028))
+* **update:** update readme and docs vitepress ([e420e07](https://github.com/Bintang-Technology-Solusindo/hotelier-widgets/commit/e420e0779048d3e39fb864ff56cb949f8c8f973e))
+
+### :zap: Refactor
+
+* **style:** fix default style ([ba5ae35](https://github.com/Bintang-Technology-Solusindo/hotelier-widgets/commit/ba5ae353891df5e4512198236b422e7f8914f584))
+
 ## [1.2.2](https://github.com/Bintang-Technology-Solusindo/hotelier-widgets/compare/v1.2.1...v1.2.2) (2025-06-12)
 
 ### :repeat: CI
