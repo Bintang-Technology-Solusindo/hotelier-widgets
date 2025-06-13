@@ -8,7 +8,7 @@ export const HorizontalRoundedTemplate = (index: number, url: string | null) => 
             <label for="checkin-horizontal-rounded-${index}" class="text-xs text-gray-500 sm:hidden dark:text-slate-100">Check-in</label>
             <input type="date" id="checkin-horizontal-rounded-${index}" name="checkin" class="w-full bg-transparent border-0 focus:ring-0 text-gray-700 p-0 focus-visible:outline-none dark:text-white" required>
           </div>
-        </div>  
+        </div>
         <div class="border-t sm:border-t-0 sm:border-l border-gray-200 sm:h-8 sm:mx-2"></div>
         <div class="flex-1 flex items-center">
           <div class="w-full">
