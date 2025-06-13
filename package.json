@@ -15,9 +15,7 @@
     "docs:preview": "vitepress preview docs"
   },
   "type": "module",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
     "@semantic-release/changelog": "^6.0.3",
@@ -46,9 +44,7 @@
     }
   },
   "release": {
-    "branches": [
-      "main"
-    ],
+    "branches": ["main"],
     "plugins": [
       "@semantic-release/changelog",
       "@semantic-release/npm",
@@ -155,12 +151,8 @@
       [
         "@semantic-release/git",
         {
-          "assets": [
-            "package.json",
-            "bun.lock",
-            "CHANGELOG.md"
-          ],
-          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+          "assets": ["package.json", "bun.lock", "CHANGELOG.md"],
+          "message": "chore(release): ${nextRelease.version}\n\n${nextRelease.notes}"
         }
       ]
     ]
