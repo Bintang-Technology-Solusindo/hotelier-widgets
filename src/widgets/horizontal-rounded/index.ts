@@ -6,6 +6,7 @@ export const HorizontalRounded = async () => {
   const style = await HorizontalRoundedStyle();
   const elements = document.querySelectorAll("[hotelier-widget='horizontal-rounded']");
   for (const [index, element] of Array.from(elements).entries()) {
+    if (element.shadowRoot) return;
     const url = element.getAttribute("data-url");
 
     const template = HorizontalRoundedTemplate(index, url);

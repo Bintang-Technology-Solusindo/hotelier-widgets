@@ -6,6 +6,7 @@ export const HorizontalCompact = async () => {
   const style = await HorizontalCompactStyle();
   const elements = document.querySelectorAll("[hotelier-widget='horizontal-compact']");
   for (const [index, element] of Array.from(elements).entries()) {
+    if (element.shadowRoot) return;
     const url = element.getAttribute("data-url");
 
     const template = HorizontalCompactTemplate(index, url);

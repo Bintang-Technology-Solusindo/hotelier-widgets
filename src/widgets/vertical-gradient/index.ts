@@ -6,6 +6,7 @@ export const VerticalGradient = async () => {
   const style = await VerticalGradientStyle();
   const elements = document.querySelectorAll("[hotelier-widget='vertical-gradient']");
   for (const [index, element] of Array.from(elements).entries()) {
+    if (element.shadowRoot) return;
     const url = element.getAttribute("data-url");
 
     const template = VerticalGradientTemplate(index, url);

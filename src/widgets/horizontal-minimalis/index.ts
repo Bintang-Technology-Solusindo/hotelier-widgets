@@ -6,6 +6,7 @@ export const HorizontalMinimalis = async () => {
   const style = await HorizontalMinimalisStyle();
   const elements = document.querySelectorAll("[hotelier-widget='horizontal-minimalis']");
   for (const [index, element] of Array.from(elements).entries()) {
+    if (element.shadowRoot) return;
     const url = element.getAttribute("data-url");
 
     const template = HorizontalMinimalisTemplate(index, url);
