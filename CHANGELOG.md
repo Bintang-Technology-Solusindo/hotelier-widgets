@@ -1,3 +1,13 @@
+## [1.2.6](https://github.com/Bintang-Technology-Solusindo/hotelier-widgets/compare/v1.2.5...v1.2.6) (2025-06-25)
+
+### :bug: Fixes
+
+* **shadow:** duplicate attach shadowRoot ([0748197](https://github.com/Bintang-Technology-Solusindo/hotelier-widgets/commit/0748197efb4e38a2092d87ce4e8506a591205f21))
+
+### :repeat: CI
+
+* **workflow:** update deploy-docs workflow [skip ci] ([6d6ba1d](https://github.com/Bintang-Technology-Solusindo/hotelier-widgets/commit/6d6ba1ddb4a481b9972c66fed2da71f898a7c2a4))
+
 ## [1.2.5](https://github.com/Bintang-Technology-Solusindo/hotelier-widgets/compare/v1.2.4...v1.2.5) (2025-06-13)
 
 ### :repeat: CI
